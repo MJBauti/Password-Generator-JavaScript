@@ -9,7 +9,7 @@
 
 ## Usage
 
-![The Password Generator application displays a red button to "Generate Password".](./assets/images/screenshot.png)
+![The Password Generator application displays a red button to "Generate Password".](./assets/Images/screenshot.png)
 
 To use the Password Generator: 
 
