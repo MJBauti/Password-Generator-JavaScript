@@ -22,11 +22,15 @@ const randomFunc = {
 
 function generatePassword() {
   var generatedPassword = "";
-  
+
   // Have user define characters used
   var passwordCharSet = "";
 
   var length = window.prompt("Password Length (8-128):");
+  if(length < 8 || length > 128) {
+    window.alert("Please enter a value between 8-128.");
+    return;
+  }
 
   var hasLower = window.confirm("Include Lowercase?");
   if (hasLower) {
@@ -48,7 +52,8 @@ function generatePassword() {
     passwordCharSet += randomFunc.special
   }
 
-  if(passwordCharSet === 0) {
+  if(passwordCharSet === "") {
+    window.alert("Please choose atleast one character type.")
     return;
   }
 
