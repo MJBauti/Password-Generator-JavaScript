@@ -4,7 +4,6 @@
 
 - To better understand JavaScript, specifically functions within JavaScript, I designed a Random Password generator utilizing provided HTML & CSS. 
 - The random Password Generator is a practical tool to create password fitting multiple criteria.
-- 
 - Additionally, I increased my knowledge in Character Set Code. Which I utilized in my random character selector functions.
 
 ## Usage
