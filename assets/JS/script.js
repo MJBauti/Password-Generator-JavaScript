@@ -13,7 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-const RandomFunc = {
+const randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
   number: getRandomNumber,
@@ -22,7 +22,7 @@ const RandomFunc = {
 
 function generatePassword() {
   var generatedPassword = "";
-
+  
   // Have user define characters used
   var passwordCharSet = "";
 
@@ -30,29 +30,34 @@ function generatePassword() {
 
   var hasLower = window.confirm("Include Lowercase?");
   if (hasLower) {
-    passwordCharSet += RandomFunc.lower
+    passwordCharSet += randomFunc.lower
   }
 
   var hasUpper = window.confirm("Include Uppercase?");
   if (hasUpper) {
-    passwordCharSet += RandomFunc.upper
+    passwordCharSet += randomFunc.upper
   }
 
   var hasNumber = window.confirm("Include Numbers?");
   if (hasNumber) {
-    passwordCharSet += RandomFunc.number
+    passwordCharSet += randomFunc.number
   }
 
   var hasSpecial = window.confirm("Include Special Characters?");
   if (hasSpecial) {
-    passwordCharSet += RandomFunc.special
+    passwordCharSet += randomFunc.special
   }
-
-  var charSetArray = [{lower}, {upper}, {number}, {special}].filter(item => Object.values(item)[0]);
 
   if(passwordCharSet === 0) {
     return;
   }
+
+  // Loop to create password
+  for(var i = 0; i < length; i ++) {
+    generatedPassword += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
+  }
+
+  return generatedPassword;
 }
 
 // Generate Random Characters
